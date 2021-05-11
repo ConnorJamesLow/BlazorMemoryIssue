@@ -27,6 +27,9 @@
                 <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data 2
             </NavLink>
         </li>
+        <li class="nav-item px-3" style="cursor: pointer">
+            <a class="nav-link" @onclick="Collect">Collect</a>
+        </li>
     </ul>
 </div>
 
@@ -39,4 +42,6 @@
     {
         collapseNavMenu = !collapseNavMenu;
     }
+
+    private void Collect() => GC.Collect(2, GCCollectionMode.Forced);
 }
