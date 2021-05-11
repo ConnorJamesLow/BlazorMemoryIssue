@@ -1,0 +1,11 @@
+﻿<tr>
+    <td>@Forecast.Date.ToShortDateString()</td>
+    <td>@Forecast.TemperatureC</td>
+    <td>@Forecast.TemperatureF</td>
+    <td>@Forecast.Summary</td>
+</tr>
+
+@code {
+    [Parameter]
+    public ScrollingMemoryGrowth.Data.WeatherForecast Forecast { get; set; }
+}
